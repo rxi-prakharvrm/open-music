@@ -127,3 +127,31 @@ body {
     vertical-align: middle;
     cursor: pointer;
 }
+
+.song-item {
+    height: 4rem;
+    width: 25vw;
+    background-color: #f1f1f1;
+    color: #333;
+    border-radius: 3rem;
+    padding: 0 .6rem;
+    margin: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song-cover {
+    width: 3rem;
+    border-radius: 100%;
+}
+
+.song-info {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.song-play-btn {
+    width: 3rem;
+}
