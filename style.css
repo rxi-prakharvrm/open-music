@@ -116,7 +116,7 @@ body {
     margin: 1rem 0;
 }
 
-.play-btn {
+.master-play-btn {
     width: 5rem;
     vertical-align: middle;
     cursor: pointer;
@@ -127,3 +127,49 @@ body {
     vertical-align: middle;
     cursor: pointer;
 }
+
+/* Song item  */
+.song-item {
+    height: 5.5rem;
+    width: 40%;
+    padding: 0 0.5rem;
+    margin: 1rem 0;
+    background-color: #fff;
+    border-radius: 5rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .song-cover {
+    width: 4.5rem;
+    border-radius: 100%;
+  }
+  
+  .song-info {
+    width: 75%;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .song-name {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  .song-artist {
+    color: #666;
+  }
+  
+  .song-duration {
+    font-size: 1.6rem;
+  }
+
+  .song-control {
+    width: 3.5rem;
+    margin: 0 1rem;
+  }
