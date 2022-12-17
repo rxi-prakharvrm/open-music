@@ -2,6 +2,7 @@
 var songItems = document.getElementById("song-items")
 var audioElement = new Audio("songs/1.mp3")
 var masterPlayBtn = document.getElementsByClassName("master-play-btn")[0]
+var myProgreeBar = document.getElementById("my-progress-bar")
 var songIndex = 0
 var songs = [
   {
@@ -129,20 +130,74 @@ for(var i = 0; i < songs.length; i++) {
   createSongItem(i)
 }
 
+// pause all songs but current
+// function pauseAll() {
+//   Array.from(document.getElementsByClassName("song-control")).forEach((element) => {
+//     element.src = "icons/pause.png"
+//   })
+// }
+
 // run playSong function
 masterPlayBtn.addEventListener("click", (e) => {
+  // var songClass = document.getElementsByClassName(`${e.target.classList.value}`)[songIndex]
+  if (audioElement.paused || audioElement.currentTime <= 0) {
     audioElement.play()
     masterPlayBtn.src = "icons/pause.png"
-    // console.log(e.target.classList)
+    songClass.src = "icons/pause.png"
+  } else {
+    audioElement.pause()
+    masterPlayBtn.src = "icons/play.png"
+    songClass.src = "icons/play.png"
+  }
 })
 
+// change song control
 Array.from(document.getElementsByClassName("song-control")).forEach((element) => {
-    element.addEventListener("click", (e) => {
-        songIndex = parseInt(e.target.id)
-        // console.log(songIndex)
-        audioElement.src = `songs/${songIndex+1}.mp3`
-        audioElement.play()
-        songClass = document.getElementsByClassName(`${e.target.classList.value}`)[songIndex]
-        songClass.src = "icons/pause.png"
-    })
+  element.addEventListener("click", (e) => {
+    songIndex = parseInt(e.target.id)
+    if (audioElement.paused || audioElement.currentTime <= 0) {
+      var songClass = document.getElementsByClassName(`${e.target.classList.value}`)[songIndex]
+      audioElement.src = `songs/${songIndex+1}.mp3`
+      audioElement.play()
+      songClass.src = "icons/pause.png"
+      masterPlayBtn.src = "icons/pause.png"
+    } else {
+      var songClass = document.getElementsByClassName(`${e.target.classList.value}`)[songIndex]
+      audioElement.pause()
+      songClass.src = "icons/play.png"
+      masterPlayBtn.src = "icons/play.png"
+    }
+  })
+})
+
+// song progrees bar
+audioElement.addEventListener("timeupdate", () => {
+  progress = parseInt((audioElement.currentTime/audioElement.duration) * 100)
+  myProgreeBar.value = progress
+})
+
+myProgreeBar.addEventListener("change", () => {
+  audioElement.currentTime = (myProgreeBar.value * audioElement.duration) / 100
+})
+
+// previous button control
+document.getElementById("previous-btn").addEventListener("click", () => {
+  if (songIndex < 0) {
+    songIndex = songs.length-1
+  } else {
+    songIndex -= 1
+  }
+  audioElement.src = `songs/${songIndex+1}.mp3`
+  audioElement.play()
+})
+
+// next button control
+document.getElementById("next-btn").addEventListener("click", () => {
+  if (songIndex >= songs.length) {
+    songIndex = 0
+  } else {
+    songIndex += 1
+  }
+  audioElement.src = `songs/${songIndex+1}.mp3`
+  audioElement.play()
 })
