@@ -13,7 +13,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     background-color: rgb(41, 38, 38);
-    overflow-y: none;
 }
 
 .top-header {

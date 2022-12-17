@@ -5,18 +5,74 @@ var masterPlayBtn = document.getElementsByClassName("master-play-btn")[0]
 var songIndex = 0
 var songs = [
   {
-    cover: "https://britasia.tv/wp-content/uploads/2020/09/Eh09An1VkAEohgB.jpg",
-    name: "Brown Munde",
-    artist: "AP Dhillon, Gurinder Gill, Shinda Kahlon, Gminxr",
-    duration: "4:14",
+    cover: "https://a10.gaanacdn.com/images/albums/21/4020021/crop_480x480_4020021.jpg",
+    name: "8 Raflaan",
+    artist: "Gurlez Akhtar, Mankirt Aulakh",
+    duration: "1:55",
     link: "songs/1.mp3"
   },
   {
-    cover: "https://i.scdn.co/image/ab67616d0000b2732ad20dea9fd501af01c954f3",
-    name: "Jehda Nasha",
-    artist: "Yohani, Amar Jalal, Harjot Kaur, IP Singh",
-    duration: "2:02",
+    cover: "https://www.gryindia.com/wp-content/uploads/2021/05/WhatsApp-Image-2021-05-08-at-10.52.33-PM.jpeg",
+    name: "Bapu",
+    artist: "Sumit Goswami",
+    duration: "2:57",
     link: "songs/2.mp3"
+  },
+  {
+    cover: "https://i.scdn.co/image/ab67616d00001e02a15e7c51ad44073a65ca5503",
+    name: "Babu Degya",
+    artist: "Gulzaar Chhanniwala",
+    duration: "3:17",
+    link: "songs/3.mp3"
+  },
+  {
+    cover: "https://i.pinimg.com/originals/c7/16/d1/c716d1907798ebdf63df1cfc1436a1de.jpg",
+    name: "Bad Munda",
+    artist: "Jass Manak",
+    duration: "2:57",
+    link: "songs/4.mp3"
+  },
+  {
+    cover: "https://i.pinimg.com/originals/97/19/84/9719848b5c98be7b28f97341a8cb9134.jpg",
+    name: "Badnam",
+    artist: "Mankirt Aulakh",
+    duration: "3:24",
+    link: "songs/5.mp3"
+  },
+  {
+    cover: "https://pbs.twimg.com/media/El4yOTKVkAAnQOX?format=jpg&name=900x900",
+    name: "BamBholle",
+    artist: "Laxmi Bomb",
+    duration: "3:40",
+    link: "songs/6.mp3"
+  },
+  {
+    cover: "https://i1.sndcdn.com/artworks-000217893176-igg61r-t500x500.jpg",
+    name: "Bhula Dena",
+    artist: "Arijit Singh",
+    duration: "4:00",
+    link: "songs/7.mp3"
+  },
+  {
+    cover: "https://m.media-amazon.com/images/M/MV5BZjNkMTQwZjAtMWZiMi00MDIxLTgxY2MtOWIxY2ViZjc2N2FlXkEyXkFqcGdeQXVyODAzNzAwOTU@._V1_FMjpg_UX1000_.jpg",
+    name: "Bijlee Bijlee",
+    artist: "harrdy Sandhu",
+    duration: "2:48",
+    link: "songs/8.mp3"
+  },
+  {
+    cover: "https://britasia.tv/wp-content/uploads/2020/09/Eh09An1VkAEohgB.jpg",
+    name: "Brown Munde",
+    artist: "AP Dhillon, Gurinder Gill, Shinda Kahlon, Gminxr",
+    duration: "4:27",
+    link: "songs/9.mp3"
+  },
+  {
+    cover: "https://i.scdn.co/image/ab67616d0000b2736bea051cd7ea7160decffbf8",
+    name: "Burj Khalifa",
+    artist: "DJ Khushi, Nikhita Gandhi, Madhubanti Bagchi, Shashi",
+    duration: "3:07",
+    link: "songs/10.mp3"
   }
 ]
 
